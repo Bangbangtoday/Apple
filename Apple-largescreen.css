@@ -1,1 +1,121 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
 
+#topnav {                                                 /* Whole container for the top navbar */
+    position: fixed;
+    width: 100%;
+    height: 45px;
+    background-color: #2c2c2e;
+    top: 0;
+}
+
+#navcontainer {                                           /* Container for the flex items */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 1050px;
+    height: 100%;
+    margin: auto;                                            /* Center the container */
+}
+
+@media screen and (max-width: 1070px) {
+   #navcontainer {width: 100%;}                                       /* Allow navbar column-gap shrinks accordingly when the screen is smaller */
+}
+
+#navcontainer > * {
+    color: #f5f5f7;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    text-decoration: none;
+    transition: .3s;
+    height: 100%;
+    line-height: 45px;
+    white-space: nowrap;
+    opacity: .8;
+}
+
+#navcontainer > *:hover {
+    opacity: 1;
+}
+
+#logo {
+    line-height: 51px;
+}
+
+#search {
+    line-height: 51px;
+    cursor: pointer;
+}
+
+#bagcheckbox {
+    display: none;
+}
+
+#bag {
+    line-height: 51px;
+    cursor: pointer;
+}
+
+#shoppingbag {
+    position: relative;
+    background-color: white;
+    border: 1px solid #d1d1d1;
+    border-radius: 17px;
+    width: 270px;
+    height: 340px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    top: 50px;
+}
+
+#smallbag {
+    background-image: url("https://www.apple.com/ac/globalnav/7/en_HK/assets/ac-store/bag.svg");
+}
+
+#saveditems {
+    background-image: url("https://www.apple.com/ac/globalnav/7/en_HK/assets/ac-store/savedbyyou.svg");
+}
+
+#orders {
+    background-image: url("https://www.apple.com/ac/globalnav/7/en_HK/assets/ac-store/orders.svg");
+}
+
+#account {
+    background-image: url("https://www.apple.com/ac/globalnav/7/en_HK/assets/ac-store/account.svg");
+}
+
+#signin {
+    background-image: url("https://www.apple.com/ac/globalnav/7/en_HK/assets/ac-store/signIn.svg");
+    border: none;
+}
+
+#yourbagisempty {
+    color: #6e6e73;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.bagitems {
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    background-position: center left;
+    display: block;
+    color: #0066cc;
+    border-bottom: 1px solid #d1d1d1;
+    margin: 0 20px;
+    padding: 15px 0 15px 30px;
+    text-decoration: none;
+}
+
+.bagitems:not(#yourbagisempty):hover {
+    text-decoration: underline;
+}
+
+#shoppingbag::before {
+    content: "";
+    
+}
