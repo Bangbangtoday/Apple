@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
 }
+
 body {
     margin: 0;
 }
@@ -31,14 +32,17 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
     text-decoration: none;
-    transition: .3s;
     height: 100%;
     line-height: 45px;
     white-space: nowrap;
-    opacity: .8;
 }
 
-#navcontainer > *:hover {
+#navcontainer a, #search, #bag {
+    opacity: .8;
+    transition: .3s;
+}
+
+#navcontainer a:hover, #search:hover, #bag:hover {
     opacity: 1;
 }
 
@@ -51,6 +55,10 @@ body {
     cursor: pointer;
 }
 
+#bagandarrow {
+    position: relative;
+}
+
 #bagcheckbox {
     display: none;
 }
@@ -60,8 +68,22 @@ body {
     cursor: pointer;
 }
 
+#arrow {                                                /* The top arrow */
+    border: 1px solid;
+    background-color: white;
+    border-color: #d1d1d1 #d1d1d1 transparent transparent;
+    border-radius: 0 2px 0 0;
+    height: 10px;
+    width: 10px;
+    transform: rotate(315deg);
+    position: absolute;
+    right: 1px;
+    top: 43px;
+    z-index: 1;
+}
+
 #shoppingbag {
-    position: relative;
+    position: fixed;
     background-color: white;
     border: 1px solid #d1d1d1;
     border-radius: 17px;
@@ -69,7 +91,9 @@ body {
     height: 340px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
-    top: 50px;
+    top: 47px;
+    right: 5.5vw;
+    z-index: -1;
 }
 
 #smallbag {
@@ -107,7 +131,7 @@ body {
     color: #0066cc;
     border-bottom: 1px solid #d1d1d1;
     margin: 0 20px;
-    padding: 15px 0 15px 30px;
+    padding: 15px 0 15px 35px;
     text-decoration: none;
 }
 
@@ -115,7 +139,4 @@ body {
     text-decoration: underline;
 }
 
-#shoppingbag::before {
-    content: "";
-    
-}
+
