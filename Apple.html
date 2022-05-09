@@ -11,40 +11,52 @@
 </head>
 <body>
 
-    <nav id="topnav">
-        <nav id="navcontainer">
-        <a id="logo" href="#"><img src="https://www.apple.com/ac/globalnav/7/en_HK/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_apple_image__b5er5ngrzxqq_large.svg" alt="Logo"></a>
-        <a href="/hk/en/shop/goto/store">Store</a>
-        <a href="/hk/en/mac/">Mac</a>
-        <a href="/hk/en/ipad/">Ipad</a>
-        <a href="/hk/en/iphone/">iPhone</a>
-        <a href="/hk/en/watch/">Watch</a>
-        <a href="/hk/en/airpods/">Airpods</a>
-        <a href="/hk/en/tv-home/">TV & Home</a>
-        <a href="/hk/en/services/">Only on Apple</a>
-        <a href="/hk/en/shop/goto/buy_accessories">Accessories</a>
-        <a href="https://support.apple.com/en-hk">Support</a>
+    <div id="shoponline">
+        <p><a href="/hk/shop/goto/shop">Shop online </a>and get free delivery, Specialist help and more.</p>
+    </div>
+
+    <div id="iphone13pro">
+        <a href="/hk/en/iphone-13-pro/"></a>
+        <h1 id="topheading">iPhone 13 Pro</h1>
+        <p class="subheading">Oh. So. Pro.</p>
+        <a href="/hk/en/iphone-13-pro/" class="learnmore">Learn more</a>
+        <a href="/hk/shop/goto/buy_iphone/iphone_13_pro" class="buy">Buy</a>
+    </div>
+
+    <nav id="topnav">                       <!-- Whole grey background -->
+        <nav id="navcontainer">             <!-- Container for the icons and links -->
+        <a class="topnavitems" href="#"><img src="https://www.apple.com/ac/globalnav/7/en_HK/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_apple_image__b5er5ngrzxqq_large.svg" alt="Logo"></a>
+        <a class="topnavitems" href="/hk/en/shop/goto/store">Store</a>
+        <a class="topnavitems" href="/hk/en/mac/">Mac</a>
+        <a class="topnavitems" href="/hk/en/ipad/">Ipad</a>
+        <a class="topnavitems" href="/hk/en/iphone/">iPhone</a>
+        <a class="topnavitems" href="/hk/en/watch/">Watch</a>
+        <a class="topnavitems" href="/hk/en/airpods/">Airpods</a>
+        <a class="topnavitems" href="/hk/en/tv-home/">TV & Home</a>
+        <a class="topnavitems" href="/hk/en/services/">Only on Apple</a>
+        <a class="topnavitems" href="/hk/en/shop/goto/buy_accessories">Accessories</a>
+        <a class="topnavitems" href="https://support.apple.com/en-hk">Support</a>
         
-        <label id="search"><img src="https://api.iconify.design/carbon/search.svg?color=%23fafafa" alt="Search" width="15px" height="15px"></label>
+        <label class="topnavitems" id="search"></label>
+        
+        <div id="sidenav" >             <!-- Blank container for the icon -->
+            <input type="checkbox" name="bag" id="bagcheckbox">
+            <label class="topnavitems" id="bagicon" for="bagcheckbox"></label>         <!-- Put the icon here - opacity transition only applies to the icon, not the shopping bag -->
+            
+            <section id="shoppingbag">
+                <div id="yourbagisempty">Your Bag is empty.</div>
+                <a class="bagitems" id="smallbag" href="/hk/shop/bag">Bag</a>
+                <a class="bagitems" id="saveditems" href="/hk/shop/saveditems">Saved Items</a>
+                <a class="bagitems" id="orders" href="https://secure.store.apple.com/hk/shop/order/list">Orders</a>
+                <a class="bagitems" id="account" href="https://secure.store.apple.com/hk/shop/account/home">Account</a>
+                <a class="bagitems" id="signin" href="https://secure.store.apple.com/hk/shop/signIn?ssi=1AAABgJI9Rm4gQMl4Xw9ousE9KNhuV9lfC6TC0l1S6sbASSEUMnNeETYAAAA6aHR0cHM6Ly93d3cuYXBwbGUuY29tL2hrL2VuL3xodHRwczovL3d3dy5hcHBsZS5jb20vaGsvZW4vfAACAXGTXvqS58i50FlxzHuS8IqD6P4vckbcIEPDNEMvCudH">Sign In</a>
+            </section>
 
-        <div id="bagandarrow">
-        <input type="checkbox" name="bag" id="bagcheckbox">
-        <label id="bag" for="bagcheckbox"><img src="/ac/globalnav/7/en_HK/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_bag_image__yzte50i47ciu_large.svg" alt="Bag">
-        </label>
-        <span id="arrow"></span>
+            <div id="arrow"></div>
         </div>
-
         </nav>
     </nav>
 
-    <section id="shoppingbag">
-        <div class="bagitems" id="yourbagisempty">Your Bag is empty.</div>
-        <a class="bagitems" id="smallbag" href="/hk/shop/bag">Bag</a>
-        <a class="bagitems" id="saveditems" href="/hk/shop/saveditems">Saved Items</a>
-        <a class="bagitems" id="orders" href="https://secure.store.apple.com/hk/shop/order/list">Orders</a>
-        <a class="bagitems" id="account" href="https://secure.store.apple.com/hk/shop/account/home">Account</a>
-        <a class="bagitems" id="signin" href="https://secure.store.apple.com/hk/shop/signIn?ssi=1AAABgJI9Rm4gQMl4Xw9ousE9KNhuV9lfC6TC0l1S6sbASSEUMnNeETYAAAA6aHR0cHM6Ly93d3cuYXBwbGUuY29tL2hrL2VuL3xodHRwczovL3d3dy5hcHBsZS5jb20vaGsvZW4vfAACAXGTXvqS58i50FlxzHuS8IqD6P4vckbcIEPDNEMvCudH">Sign In</a>
-    </section>
 
 </body>
 </html>

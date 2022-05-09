@@ -1,142 +1,246 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
+  margin: 0;
 }
 
-#topnav {                                                 /* Whole container for the top navbar */
-    position: fixed;
-    width: 100%;
-    height: 45px;
-    background-color: #2c2c2e;
-    top: 0;
+#shoponline {
+  position: relative;
+  text-align: center;
+  border: 1px solid transparent;                          /* Make the div height increase and the text vertically aligned */
+  background-color: #f5f5f7;
+  top: 45px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1d1d1f;
+  font-size: 14px;
 }
 
-#navcontainer {                                           /* Container for the flex items */
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 1050px;
-    height: 100%;
-    margin: auto;                                            /* Center the container */
+#shoponline a {
+  color: #0066cc;
+  text-decoration: none;
 }
 
-@media screen and (max-width: 1070px) {
-   #navcontainer {width: 100%;}                                       /* Allow navbar column-gap shrinks accordingly when the screen is smaller */
+#shoponline a:hover {
+  text-decoration: underline;
 }
 
-#navcontainer > * {
-    color: #f5f5f7;
+#iphone13pro {
+  position: absolute;
+  background-image: url("https://www.apple.com/v/home/an/images/heroes/iphone-13-pro/hero_iphone13pro_avail__iy77cld0zwii_medium.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin: 0;
+  background-color: #fbfbfd;
+  top: 90px; 
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  text-align: center;
+}
+
+#topheading {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 54px;
+  counter-reset: #1d1d1f;
+  margin-top: 45px;
+  margin-bottom: -20px;
+}
+
+.subheading {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
-    text-decoration: none;
-    height: 100%;
-    line-height: 45px;
-    white-space: nowrap;
+    font-size: 28px;
+    counter-reset: #1d1d1f;
+    margin-bottom: 15px;
+  }
+
+.learnmore {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #0066cc;
+  font-size: 20px;
+  text-decoration: none;
+  margin-right: 30px;
 }
 
-#navcontainer a, #search, #bag {
-    opacity: .8;
-    transition: .3s;
+.buy {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #0066cc;
+  font-size: 20px;
+  text-decoration: none;
 }
 
-#navcontainer a:hover, #search:hover, #bag:hover {
-    opacity: 1;
+.learnmore:hover, .buy:hover {
+  text-decoration: underline;
 }
 
-#logo {
-    line-height: 51px;
+
+.learnmore::after, .buy::after {
+  content: " >";
+  text-decoration: none;
+}
+
+#topnav {                                   /* Whole container for the top navbar */
+  position: fixed;
+  width: 100%;
+  height: 45px;
+  background-color: #2c2c2e;
+  top: 0;
+}
+
+#navcontainer {                             /* Container for the flex items */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 1020px;
+  height: 100%;
+  margin: auto;                             /* Center the container */
+}
+
+@media screen and (max-width: 1070px) {      /* Allow navbar column-gap shrinks accordingly when the screen is smaller */
+  #navcontainer {
+    width: 100%;
+  }
+}
+
+.topnavitems {
+  color: #f5f5f7;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  text-decoration: none;
+  height: 100%;
+  line-height: 45px;
+  white-space: nowrap;
+  padding: 0 10px;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.topnavitems:hover {
+  opacity: 1;
 }
 
 #search {
-    line-height: 51px;
-    cursor: pointer;
+  cursor: pointer;
+  background-image: url("https://www.apple.com/ac/globalnav/7/en_HK/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_search_image__cbllq1gkias2_large.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  width: 30px;
 }
 
-#bagandarrow {
-    position: relative;
+#sidenav {
+  position: relative;
+  width: 30px;
+  height: 100%;
 }
 
 #bagcheckbox {
-    display: none;
+  display: none;
 }
 
-#bag {
-    line-height: 51px;
-    cursor: pointer;
+#bagicon {
+  background-image: url("https://www.apple.com/ac/globalnav/7/en_HK/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_bag_image__yzte50i47ciu_large.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  position: absolute;
+  cursor: pointer;
 }
 
-#arrow {                                                /* The top arrow */
-    border: 1px solid;
-    background-color: white;
-    border-color: #d1d1d1 #d1d1d1 transparent transparent;
-    border-radius: 0 2px 0 0;
-    height: 10px;
-    width: 10px;
-    transform: rotate(315deg);
-    position: absolute;
-    right: 1px;
-    top: 43px;
-    z-index: 1;
+#arrow {                                              /* The top arrow */
+  border: 1px solid;
+  background-color: white;
+  border-color: #d1d1d1 #d1d1d1 transparent transparent;
+  border-radius: 0 2px 0 0;
+  height: 10px;
+  width: 10px;
+  transform: rotate(315deg);
+  position: absolute;
+  right: 10px;
+  top: 43px;
+  display: none;
 }
 
 #shoppingbag {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #d1d1d1;
+  border-radius: 17px;
+  width: 290px;
+  height: 325px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13.5px;
+  top: 47px;
+  left: -130px;
+  right: auto;
+  cursor: default;
+  display: none;
+}
+
+@media screen and (max-width: 1265px) {
+  #shoppingbag {
     position: fixed;
-    background-color: white;
-    border: 1px solid #d1d1d1;
-    border-radius: 17px;
-    width: 270px;
-    height: 340px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    top: 47px;
-    right: 5.5vw;
-    z-index: -1;
+    right: 5px;
+    left: auto;
+  }
 }
 
 #smallbag {
-    background-image: url("https://www.apple.com/ac/globalnav/7/en_HK/assets/ac-store/bag.svg");
+  background-image: url("https://www.apple.com/ac/globalnav/7/en_HK/assets/ac-store/bag.svg");
+  background-size: 21px 21px;
 }
 
 #saveditems {
-    background-image: url("https://www.apple.com/ac/globalnav/7/en_HK/assets/ac-store/savedbyyou.svg");
+  background-image: url("https://www.apple.com/ac/globalnav/7/en_HK/assets/ac-store/savedbyyou.svg");
+  background-size: 21px 21px;
 }
 
 #orders {
-    background-image: url("https://www.apple.com/ac/globalnav/7/en_HK/assets/ac-store/orders.svg");
+  background-image: url("https://www.apple.com/ac/globalnav/7/en_HK/assets/ac-store/orders.svg");
+  background-size: 21px 21px;
 }
 
 #account {
-    background-image: url("https://www.apple.com/ac/globalnav/7/en_HK/assets/ac-store/account.svg");
+  background-image: url("https://www.apple.com/ac/globalnav/7/en_HK/assets/ac-store/account.svg");
+  background-size: 21px 21px;
 }
 
 #signin {
-    background-image: url("https://www.apple.com/ac/globalnav/7/en_HK/assets/ac-store/signIn.svg");
-    border: none;
+  background-image: url("https://www.apple.com/ac/globalnav/7/en_HK/assets/ac-store/signIn.svg");
+  border: none;
+  background-size: 21px 21px;
 }
 
 #yourbagisempty {
-    color: #6e6e73;
-    text-align: center;
-    padding: 40px 0;
+  color: #6e6e73;
+  text-align: center;
+  border-bottom: 1px solid #d1d1d1;
+  margin: 0 20px;
+  padding: 37px 0;
 }
 
 .bagitems {
-    background-repeat: no-repeat;
-    background-size: 25px 25px;
-    background-position: center left;
-    display: block;
-    color: #0066cc;
-    border-bottom: 1px solid #d1d1d1;
-    margin: 0 20px;
-    padding: 15px 0 15px 35px;
-    text-decoration: none;
+  background-repeat: no-repeat;
+  background-size: 25px 25px;
+  background-position: center left;
+  display: block;
+  color: #0066cc;
+  border-bottom: 1px solid #d1d1d1;
+  margin: 0 20px;
+  text-decoration: none;
+  padding: 15px 0 15px 31px;
 }
 
 .bagitems:not(#yourbagisempty):hover {
-    text-decoration: underline;
+  text-decoration: underline;
+}
+
+#bagcheckbox:checked~#shoppingbag,
+#bagcheckbox:checked~#arrow,
+#bagcheckbox:checked~#bagicon {
+  display: block;
+  opacity: 1;                                             /* Bag icon stays opacity: 1 when checked */
 }
 
 
