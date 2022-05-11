@@ -4,48 +4,186 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" media="screen and (min-width:835px)" href="apple-largescreen.css">
+    <link rel="stylesheet" media="screen and (min-width:1080px)" href="apple-largescreen.css">
     <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Apple_Computer_Logo_rainbow.svg/514px-Apple_Computer_Logo_rainbow.svg.png?20201228132849" type="image/x-icon">
     <title>Apple (Hong Kong)</title>
     <base href="https://www.apple.com">                     <!-- Base URL -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="grid">
+    
+    <div id="emptyblock">
+    </div>
 
     <div id="shoponline">
         <p><a href="/hk/shop/goto/shop">Shop online </a>and get free delivery, Specialist help and more.</p>
     </div>
+    
+    <div id="grid">
+        <div id="iphone13pro">
+            <a class="link" href="/hk/en/iphone-13-pro/"></a>
+            <h1 id="topheading">iPhone 13 Pro</h1>
+            <p class="subheading">Oh. So. Pro.</p>
+            <a href="/hk/en/iphone-13-pro/" class="learnmore">Learn more</a>
+            <a href="/hk/shop/goto/buy_iphone/iphone_13_pro" class="buy">Buy</a>
+        </div>
 
-    <div id="iphone13pro">
-        <a class="link" href="/hk/en/iphone-13-pro/"></a>
-        <h1 id="topheading">iPhone 13 Pro</h1>
-        <p class="subheading">Oh. So. Pro.</p>
-        <a href="/hk/en/iphone-13-pro/" class="learnmore">Learn more </a>
-        <a href="/hk/shop/goto/buy_iphone/iphone_13_pro" class="buy">Buy </a>
-    </div>
+        <div id="iphonese">
+            <a class="link" href="/hk/en/iphone-se/"></a>
+            <h5 id="thenew">The new</h5>
+            <h1 id="secondheading">iPhone <span id="se">SE</span></h1>
+            <p class="subheading">Love the power. Love the price</p>
+            <a href="/hk/en/iphone-se/" class="learnmore">Learn more</a>
+            <a href="/hk/shop/goto/buy_iphone/iphone_se" class="buy">Buy</a>
+        </div>
 
-    <div id="iphonese">
-        <a class="link" href="/hk/en/iphone-se/"></a>
-        <h5 id="thenew">The new</h5>
-        <h1 id="secondheading">iPhone <span id="se">SE</span></h1>
-        <p class="subheading">Love the power. Love the price</p>
-        <a href="/hk/en/iphone-13-pro/" class="learnmore">Learn more </a>
-        <a href="/hk/shop/goto/buy_iphone/iphone_13_pro" class="buy">Buy</a>
-    </div>
-
-    <div id="ipadair">
-        <a class="link" href="/hk/en/ipad-air/"></a>
-        <!-- <div id="ipadcontainer"> -->
-            <h3 id="ipadheading">iPad <span id="air">air</span></h3>
+        <div id="ipadair">
+            <a class="link" href="/hk/en/ipad-air/"></a>
+            <h3 id="ipadheading">iPad<span id="air">air</span></h3>
             <p id="ipadsubheading">Light. Bright. Full of might.</p>
-            <a href="/hk/en/iphone-13-pro/" class="learnmore">Learn more </a>
-            <a href="/hk/shop/goto/buy_iphone/iphone_13_pro" class="buy">Buy </a>
-        <!-- </div> -->
+            <a href="/hk/en/ipad-air/" class="learnmore">Learn more</a>
+            <a href="/hk/shop/goto/buy_ipad/ipad_air" class="buy" id="ipadbuy">Buy</a>
+        </div>
 
+        <div id="wwdc">
+            <a class="link" href="https://developer.apple.com/wwdc/"></a>
+            <h1 id="wwdcheading"></h1>
+            <p id="wwdcsubheading"><span>The Worldwide Developers Conference is coming. Join us online June 7-11 HKT.</span></p>
+            <a href="https://developer.apple.com/wwdc/" id="wwdclearnmore">Learn more</a>
+        </div>
+
+        <div id="watch">
+            <a class="link" href="https://developer.apple.com/wwdc/"></a>
+            <h1 id="watchheading"></h1>
+            <p class="smallsubheading">It's our largest display yet.</p>
+            <a href="/hk/en/apple-watch-series-7/" class="learnmore small" >Learn more</a>
+            <a href="/hk/shop/goto/buy_watch/apple_watch_series_7" class="buy small">Buy</a>
+        </div>
+
+        <div id="iphone13">
+            <a class="link" href="/hk/en/iphone-13/"></a>
+            <h3 class="smallheading">iPhone 13</h3>
+            <p class="smallsubheading">Your new superpower.</p>
+            <a href="/hk/en/iphone-13/" class="learnmore small" >Learn more</a>
+            <a href="/hk/shop/goto/buy_iphone/iphone_13" class="buy small">Buy</a>
+        </div>
+
+        <div id="studiodisplay">
+            <a class="link" href="/hk/en/studio-display/"></a>
+            <h3 class="smallheading">Studio Display</h3>
+            <p class="smallsubheading">A sight to be bold.</p>
+            <a href="/hk/en/studio-display/" class="learnmore small" >Learn more</a>
+            <a href="/hk/shop/goto/buy_mac/mac_studio_display" class="buy small">Buy</a>
+        </div>
+
+        <div id="airpods">
+            <a class="link" href="/hk/en/airpods-3rd-generation/"></a>
+            <h3 class="smallheading airpodsmargin">Airpods</h3>
+            <p class="smallsubheading">All-new with Spatial Audio.</p>
+            <a href="/hk/en/airpods-3rd-generation/" class="learnmore small" >Learn more</a>
+            <a href="/hk/shop/goto/product/MME73" class="buy small">Buy</a>
+        </div>
+
+        <div id="movie">
+            <a class="link" href="https://tv.apple.com/hk/show/umc.cmc.5nidhx69sm3a7gtv2a4k0l0lw?itscg=10000&itsct=atv-apl_hp-pmo_wch-BIGCON-220510"></a>   
+            <h1 id="appletv"></h1>
+            <h1 id="moviename"></h1>
+            <a href="https://tv.apple.com/hk/show/umc.cmc.5nidhx69sm3a7gtv2a4k0l0lw?itscg=10000&itsct=atv-apl_hp-pmo_wch-BIGCON-220510" id="streamnow">Stream Now</a>
+        </div>
+   
     </div>
 
-    </div>
+    <div id="bottomcontainer">
+        <p id="bottomgrid1">HK$38/month after free trial. Only one offer per Apple ID and only one offer per family if you're part of a Family Sharing group, regardless of the number of devices you or your family purchases. This offer is not available if you or your Family have previously accepted an Apple TV+ one year free offer. Offer good for 3 months after eligible device activation. Plan automatically renews until cancelled. Restrictions and other <a href="/hk/en/promo/">term</a> apply.</p>
 
+        <ul id="bottomgrid2">
+            <li class="listheader">Shop and Learn</li>
+            <li><a class="listitems" href="">Store</a></li>
+            <li><a class="listitems" href="">Mac</a></li>
+            <li><a class="listitems" href="">iPad</a></li>
+            <li><a class="listitems" href="">iPhone</a></li>
+            <li><a class="listitems" href="">Watch</a></li>
+            <li><a class="listitems" href="">AirPods</a></li>
+            <li><a class="listitems" href="">TV & Home</a></li>
+            <li><a class="listitems" href="">iPod touch</a></li>
+            <li><a class="listitems" href="">AirTag</a></li>
+            <li><a class="listitems" href="">Accessories</a></li>
+            <li><a class="listitems" href="">Gift Cards</a></li>
+        </ul>
+
+        <ul id="bottomgrid2">
+            <li class="listheader">Services</li>
+            <li><a class="listitems" href="">Apple Music</a></li>
+            <li><a class="listitems" href="">Apple TV+</a></li>
+            <li><a class="listitems" href="">iCloud</a></li>
+            <li><a class="listitems" href="">Apple Pay</a></li>
+            <li><a class="listitems" href="">Apple Books</a></li>
+            <li><a class="listitems" href="">Apple Podcasts</a></li>
+            <li><a class="listitems" href="">App Store</a></li>
+            <li class="listheader subheader">Account</li>
+            <li><a class="listitems" href="">Manage Your Apple ID</a></li>
+            <li><a class="listitems" href="">Apple Store Account</a></li>
+            <li><a class="listitems" href="">iCloud.com</a></li>
+        </ul>
+
+        <ul id="bottomgrid2">
+            <li class="listheader">Apple Store</li>
+            <li><a class="listitems" href="">Find a Store</a></li>
+            <li><a class="listitems" href="">Genius Bar</a></li>
+            <li><a class="listitems" href="">Today at Apple</a></li>
+            <li><a class="listitems" href="">Apple Camp</a></li>
+            <li><a class="listitems" href="">Apple Store App</a></li>
+            <li><a class="listitems" href="">Refurbished and Clearance</a></li>
+            <li><a class="listitems" href="">Apple Trade In</a></li>
+            <li><a class="listitems" href="">Order Status</a></li>
+            <li><a class="listitems" href="">Shopping Help</a></li>
+        </ul>
+
+        <ul id="bottomgrid2">
+            <li class="listheader">For Business</li>
+            <li><a class="listitems" href="">Apple and Business</a></li>
+            <li><a class="listitems" href="">Shop for Business</a></li>
+            <li class="listheader subheader">For Education</li>
+            <li><a class="listitems" href="">Apple and Education</a></li>
+            <li><a class="listitems" href="">Shop for College</a></li>
+            <li class="listheader subheader">For Healthcare</li>
+            <li><a class="listitems" href="">Apple in Healthcare</a></li>
+            <li><a class="listitems" href="">Health on Apple Watch</a></li>
+        </ul>
+
+        <ul id="bottomgrid2">
+            <li class="listheader">Apple Values</li>
+            <li><a class="listitems" href="">Accessibility</a></li>
+            <li><a class="listitems" href="">Environment</a></li>
+            <li><a class="listitems" href="">Privacy</a></li>
+            <li><a class="listitems" href="">Supplier Responsibility</a></li>
+            <li class="listheader subheader">About Apple</li>
+            <li><a class="listitems" href="">Newsroom</a></li>
+            <li><a class="listitems" href="">Apple Leadership</a></li>
+            <li><a class="listitems" href="">Career Opportunities</a></li>
+            <li><a class="listitems" href="">Ethics & Compliance</a></li>
+            <li><a class="listitems" href="">Events</a></li>
+            <li><a class="listitems" href="">Contact Apple</a></li>
+        </ul>
+
+        <p id="bottomgrid3">More ways to shop: <a href="">Find an Apple Store</a> or <a href="">other retailer</a> near you. Or call 800-908-988.</p>
+
+        <footer>
+            <div>Copyright © 2022 Apple Inc. All rights reserved.</div>
+            <a href="">Privacy Policy</a>
+            <a href="">Terms of Use</a>
+            <a href="">Sales Policy</a>
+            <a href="">Legal</a>
+            <a href="" style="flex-grow: 3;">Site Map</a>
+            <a href="">Hong Kong</a>
+            <a href="">繁體中文</a>
+        </footer>
+    </div>
+    
+    
     <nav id="topnav">                       <!-- Whole grey background -->
         <nav id="navcontainer">             <!-- Container for the icons and links -->
         <a class="topnavitems" href="#"><img src="https://www.apple.com/ac/globalnav/7/en_HK/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_apple_image__b5er5ngrzxqq_large.svg" alt="Logo"></a>

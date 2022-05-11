@@ -8,17 +8,23 @@ body {
 
 #grid {
   display: grid;
-  position: relative;
   top: 45px;
+  grid-template-columns: 50% 50%;
+  gap: 10px 10px;
+}
+
+#emptyblock {
+  height: 45px;
 }
 
 #shoponline {
-  text-align: center;
+  text-align: center ;
   border: 1px solid transparent;                          /* Make the div height increase and the text vertically aligned */
   background-color: #f5f5f7;
   font-family: Arial, Helvetica, sans-serif;
   color: #1d1d1f;
   font-size: 14px;
+  height: 45px;
 }
 
 #shoponline a {
@@ -48,6 +54,7 @@ body {
   background-color: #fbfbfd;
   text-align: center;
   height: 692px;
+  grid-column: 1 / span 2;
 }
 
 #iphonese {
@@ -59,6 +66,7 @@ body {
   background-color: #fbfbfd;
   text-align: center;
   height: 692px;
+  grid-column: 1 / span 2;
 }
 
 #ipadair {
@@ -69,15 +77,61 @@ body {
   background-color: #fbfbfd;
   height: 692px;
   text-align: center;
+  grid-column: 1 / span 2;
 }
 
-#ipadcontainer {
-  position: absolute;
-  right: 60vw;
+#wwdc {
+  position: relative;
+  background-image: url("https://www.apple.com/v/home/an/images/promos/wwdc-announce/promo_wwdc_announce__dr6w8rxice4i_large.jpg");
+  background-position: bottom;
+  height: 580px;
+  width: 100%;
   text-align: center;
-  top: 50%;
-  transform: translateY(-50%);
-  border: 1px solid red;
+}
+
+#watch {
+  position: relative;
+  background-image: url("https://www.apple.com/hk/en/home/images/promos/watch-series-7/promo_watch_lte__djeaso7ukrsm_large.jpg");
+  background-position: bottom;
+  height: 580px;
+  width: 100%;
+  text-align: center;
+}
+
+#iphone13 {
+  position: relative;
+  background-image: url("https://www.apple.com/v/home/an/images/promos/iphone-13/promo_iphone13_avail__frc36u35m0ii_large.jpg");
+  background-position: bottom;
+  height: 580px;
+  width: 100%;
+  text-align: center;
+}
+
+#studiodisplay {
+  position: relative;
+  background-image: url("https://www.apple.com/v/home/an/images/promos/studio-display/promo_studiodisplay_avail__d1cx9j73ooq6_large.jpg");
+  background-position: bottom;
+  height: 580px;
+  width: 100%;
+  text-align: center;
+}
+
+#airpods {
+  position: relative;
+  background-image: url("https://www.apple.com/v/home/an/images/promos/airpods/tile_airpods__fuv6vgn42y2q_large.jpg");
+  background-position: bottom;
+  height: 580px;
+  width: 100%;
+  text-align: center;
+}
+
+#movie {
+  position: relative;
+  background-image: url("https://www.apple.com/v/home/an/images/promos/tv-plus-big-conn/promo_big_conn__c09lqm5n9kae_large.png");
+  background-position: center;
+  height: 580px;
+  width: 100%;
+  text-align: center;
 }
 
 #ipadheading {
@@ -85,9 +139,22 @@ body {
   font-size: 56px;
   color: white;
   font-weight: 500;
-  margin: 0;
+  margin-right: 630px;
+  margin-top: 250px;
+  margin-bottom: 0;
   line-height: 40px;
-  position: relative;
+}
+
+#air {
+  font-family: 'Yellowtail', cursive;
+  font-size: 80px;
+  display: inline-block;
+  width: 90px;
+  height: 60px;
+  background-image: linear-gradient(rgb(78, 62, 219), white);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #ipadsubheading {
@@ -95,12 +162,11 @@ body {
   font-size: 28px;
   color: white;
   line-height: 1px;
-  position: relative;
+  margin-right: 630px;
 }
 
-#ipadpair {
-  position: absolute;
-  width: 100%;
+#ipadbuy {
+  margin-right: 630px;
 }
 
 #thenew {
@@ -148,13 +214,6 @@ body {
     margin-bottom: 15px;
   }
 
-.pair {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  border: 1px solid;
-}
-
 .learnmore {
   font-family: Arial, Helvetica, sans-serif;
   color: #0066cc;
@@ -162,7 +221,6 @@ body {
   text-decoration: none;
   margin-right: 30px;
   position: relative;
-  z-index: 1;
 }
 
 .buy {
@@ -170,16 +228,238 @@ body {
   color: #0066cc;
   font-size: 20px;
   text-decoration: none;
-  z-index: 1;
   position: relative;
 }
 
-.learnmore:hover, .buy:hover {
+.learnmore:hover, .buy:hover, #wwdclearnmore:hover, #streamnow:hover {
   text-decoration: underline;
 }
 
 .learnmore::after, .buy::after {
   content: url("https://api.iconify.design/akar-icons/chevron-right.svg?color=%2306c");
+  margin-left: 3px;
+  top: 3px;
+  position: relative;
+}
+
+.small::after, .small::after {
+  content: url("https://api.iconify.design/akar-icons/chevron-right.svg?width=12&height=12&color=%2306c");
+  margin-left: 3px;
+  top: 1px;
+  position: relative;
+}
+
+#wwdcheading {
+  background-image: url("https://www.apple.com/v/home/an/images/logos/wwdc-announce/wwdc22_logo__f39kr8derwya_large.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  height: 60px;
+  margin-top: 400px;
+  margin-bottom: 0;
+}
+
+#wwdcsubheading {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: #c6e1e6;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+#wwdcsubheading span {
+  display: inline-block;
+  width: 365px;
+}
+
+#wwdclearnmore {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #0066cc;
+  font-size: 16px;
+  text-decoration: none;
+  position: relative;
+}
+
+#wwdclearnmore::after {
+  content: url("https://api.iconify.design/akar-icons/arrow-up-right.svg?color=%2306c");
+  margin-left: 3px;
+  top: 4px;
+  position: relative;
+}
+
+#watchheading {
+  background-image: url("https://www.apple.com/v/home/an/images/logos/watch-series-7/promo_logo_watch_lte__emrof7zzkriq_large.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  height: 60px;
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+
+.smallsubheading {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1d1d1f;
+  font-size: 20px;
+  margin-top: 8px;
+}
+
+.small {
+  font-size: 16px;
+}
+
+.smallheading {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1d1d1f;
+  font-size: 40px;
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+
+.airpodsmargin {
+  margin-top: 430px;
+}
+
+#appletv {
+  background-image: url("https://www.apple.com/v/home/an/images/logos/tv-plus/logo__dcojfwkzna2q_large.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  height: 60px;
+  margin-top: 50px;
+}
+
+#moviename {
+  background-image: url("https://www.apple.com/hk/en/home/promos/tv-plus-big-conn/images/promo_logo_big_conn__dhzmdcfnqqwm_large.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  height: 150px;
+  margin-top: 270px;
+  margin-bottom: 0;
+}
+
+#streamnow {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #0066cc;
+  font-size: 16px;
+  text-decoration: none;
+  position: relative;
+}
+
+#streamnow::after {
+  content: url("https://api.iconify.design/ci/play-circle-filled.svg?width=20&height=20&color=%2306c");
+  margin-left: 3px;
+  top: 4px;
+  position: relative;
+}
+
+#bottomcontainer {
+  display: grid;
+  grid-template-columns: repeat(5, 200px);
+  background-color: #f5f5f7;
+  justify-content: center;
+}
+
+#bottomgrid1 {
+  grid-column: 1 / span 5;
+  border-bottom: 1px solid #d2d2d7;
+  padding: 5px 0 20px 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #6e6e73;
+  line-height: 15px;
+}
+
+#bottomgrid1 a {
+  color: #424245;
+  text-decoration: none;
+}
+
+#bottomgrid1 a:hover {
+  text-decoration: underline;
+}
+
+#bottomgrid2 {
+  color: #424245;
+  text-decoration: none;
+  list-style-type: none;
+  padding: 0;                               /* Clear the default padding for lists */
+  margin: 5px 0 0 0;
+}
+
+.listheader {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #1d1d1f;
+  font-weight: bold;
+  line-height: 25px;
+}
+
+.subheader {
+  margin-top: 20px;
+}
+
+.listitems {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #424245;
+  text-decoration: none;
+  line-height: 25px;
+}
+
+.listitems:hover {
+  text-decoration: underline;
+}
+
+#bottomgrid3 {
+  grid-column: 1 / span 5;
+  border-bottom: 1px solid #d2d2d7;
+  padding: 20px 0 5px 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #6e6e73;
+  line-height: 15px;
+}
+
+#bottomgrid3 a {
+  text-decoration: none;
+  color: #0066cc;
+}
+
+#bottomgrid3 a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  grid-column: 1 / span 5;
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+footer > div {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #6e6e73;
+  margin-right: 30px;
+}
+
+footer > a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #424245;
+  text-decoration: none;
+  padding: 0 10px;
+  border-right: 1px solid #d2d2d7;
+}
+
+footer > a:last-child, footer > a:nth-child(6) {
+  border: none;
+}
+
+footer > a:hover {
+  text-decoration: underline;
 }
 
 #topnav {                                   /* Whole container for the top navbar */
