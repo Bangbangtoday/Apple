@@ -16,6 +16,15 @@ body {
   text-decoration: underline;
 }
 
+.opacity {
+  opacity: .8;
+  transition: .3s;
+}
+
+.opacity:hover {
+  opacity: 1;
+}
+
 .background {
   background-repeat: no-repeat;
   background-position: bottom;
@@ -397,12 +406,6 @@ footer a {
   line-height: 45px;
   white-space: nowrap;
   padding: 0 10px;
-  opacity: 0.8;
-  transition: 0.3s;
-}
-
-.topnavitems:hover {
-  opacity: 1;
 }
 
 #search {
@@ -508,9 +511,9 @@ footer a {
   padding: 15px 0 15px 31px;
 }
 
-#bagcheckbox:checked~#shoppingbag,
-#bagcheckbox:checked~#arrow,
-#bagcheckbox:checked~#bagicon {
+#bagcheckbox:checked ~ #shoppingbag,
+#bagcheckbox:checked ~ #arrow,
+#bagcheckbox:checked ~ #bagicon {
   display: block;
   opacity: 1;                                             /* Bag icon stays opacity: 1 when checked */
 }
@@ -519,21 +522,40 @@ footer a {
   display: none;
 }
 
-/* #searchcheckbox:checked ~ #topnav {
-  background-color: black;
-}
-
 #searchcheckbox:checked ~ #topnav #navcontainer .topnavitems {
   transform: scale(0.1);
-  transition: .3s ease-in .2s;
-} */
+  transition: .3s ease-in ;
+}
+
+#searchcheckbox:checked ~ #searchpage,
+#searchcheckbox:checked ~ #shade {
+  opacity: 1;
+  z-index: 10;
+}
+
+#searchcheckbox:checked ~ #topnav #shoppingbag {
+display: none;
+} 
+
+#shade {
+  background-color: rgba(0, 0, 0, 0.43);
+  position: fixed;
+  top: 45px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: -2;
+  transition: .3s ease-out;
+}
 
 #searchpage {
   position: fixed;
-  top: 0;
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.43);
+  height: 45px;
+  top: 0;
+  opacity: 0;
+  z-index: -2;
+  transition: .3s ease-out .1s;
 }
 
 #blackblock {
@@ -544,8 +566,9 @@ footer a {
 }
 
 #searchconatiner {
+  position: relative;
   width: 680px;
-  height: 100%;
+  height: 45px;
   margin: auto;
 }
 
@@ -562,7 +585,7 @@ footer a {
 }
 
 #searchfield {
-  width: calc(100% - 100px);
+  width: calc(100% - 85px);
   height: 100%;
   border: none;
   background-color: transparent;
@@ -587,12 +610,6 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }      
   background-position: center;
   float: right;
   cursor: pointer;
-  opacity: .8;
-  transition: .3s;
-}
-
-#cross:hover {
-  opacity: 1;
 }
 
 #whiteblock {
@@ -607,6 +624,20 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }      
   color: #6e6e73;
   font-size: 12px;
   padding: 25px 0 8px 40px;
+}
+
+@keyframes moveit {
+  from {left: 200px; opacity: 0;}
+  to {left:0; opacity: 1;}
+}
+
+#searchcheckbox:checked ~ #searchpage .animation {
+  animation: moveit .5s .2s forwards;
+}
+
+.animation {
+  position: relative;
+  opacity: 0;
 }
 
 .searchitems {

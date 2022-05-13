@@ -10,6 +10,7 @@
     <base href="https://www.apple.com">                     <!-- Base URL -->
 </head>
 <body>
+
     <div id="emptyblock"></div>
 
     <div id="shoponline" class="darkcolor">
@@ -187,23 +188,23 @@
     
     <nav id="topnav">                       <!-- Whole grey background -->
         <nav id="navcontainer">             <!-- Container for the icons and links -->
-        <a class="topnavitems" href="#"><img src="https://www.apple.com/ac/globalnav/7/en_HK/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_apple_image__b5er5ngrzxqq_large.svg" alt="Logo"></a>
-        <a class="topnavitems" href="/hk/en/shop/goto/store">Store</a>
-        <a class="topnavitems" href="/hk/en/mac/">Mac</a>
-        <a class="topnavitems" href="/hk/en/ipad/">Ipad</a>
-        <a class="topnavitems" href="/hk/en/iphone/">iPhone</a>
-        <a class="topnavitems" href="/hk/en/watch/">Watch</a>
-        <a class="topnavitems" href="/hk/en/airpods/">Airpods</a>
-        <a class="topnavitems" href="/hk/en/tv-home/">TV & Home</a>
-        <a class="topnavitems" href="/hk/en/services/">Only on Apple</a>
-        <a class="topnavitems" href="/hk/en/shop/goto/buy_accessories">Accessories</a>
-        <a class="topnavitems" href="https://support.apple.com/en-hk">Support</a>
-        
-        <label class="topnavitems" id="search" for="searchcheckbox"></label>
-        
-        <div id="sidenav" >             <!-- Blank container for the icon -->
-            <input type="checkbox" name="bag" id="bagcheckbox">
-            <label class="topnavitems" id="bagicon" for="bagcheckbox"></label>         <!-- Put the icon here - opacity transition only applies to the icon, not the shopping bag -->
+            <a class="topnavitems opacity" href="#"><img src="https://www.apple.com/ac/globalnav/7/en_HK/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_apple_image__b5er5ngrzxqq_large.svg" alt="Logo"></a>
+            <a class="topnavitems opacity" href="/hk/en/shop/goto/store">Store</a>
+            <a class="topnavitems opacity" href="/hk/en/mac/">Mac</a>
+            <a class="topnavitems opacity" href="/hk/en/ipad/">Ipad</a>
+            <a class="topnavitems opacity" href="/hk/en/iphone/">iPhone</a>
+            <a class="topnavitems opacity" href="/hk/en/watch/">Watch</a>
+            <a class="topnavitems opacity" href="/hk/en/airpods/">Airpods</a>
+            <a class="topnavitems opacity" href="/hk/en/tv-home/">TV & Home</a>
+            <a class="topnavitems opacity" href="/hk/en/services/">Only on Apple</a>
+            <a class="topnavitems opacity" href="/hk/en/shop/goto/buy_accessories">Accessories</a>
+            <a class="topnavitems opacity" href="https://support.apple.com/en-hk">Support</a>
+            
+            <label class="topnavitems opacity" id="search" for="searchcheckbox"></label>
+            
+            <div id="sidenav" >             <!-- Blank container for the icon -->
+                <input type="checkbox" name="bag" id="bagcheckbox">
+                <label class="topnavitems opacity" id="bagicon" for="bagcheckbox"></label>         <!-- Put the icon here - opacity transition only applies to the icon, not the shopping bag -->
             
             <section id="shoppingbag">
                 <div id="yourbagisempty">Your Bag is empty.</div>
@@ -219,23 +220,24 @@
         </nav>
     </nav>
 
+    <label id="shade" for="searchcheckbox"></label>  
+    
     <div id="searchpage">
-        <div id="blackblock">
-            <div id="searchconatiner">
-                <button id="searchbutton" type="submit"></button>
-                <input id="searchfield" type="search" name="searchbox" placeholder="Search apple.com" autofocus>                    <!-- autofocus, always focus -->
-                <div id="cross"></div>
-                <div id="whiteblock">
-                    <div id="quicklinks">QUICK LINKS</div>
-                    <a class="searchitems darkcolor" href="/hk/en/retail/">Find a Store</a>
-                    <a class="searchitems darkcolor" href="/hk/shop/goto/accessories/apple_accessories">Accessories</a>
-                    <a class="searchitems darkcolor" href="https://www.apple.com/hk/en/airpods/">AirPods</a>
-                    <a class="searchitems darkcolor" href="https://www.apple.com/hk/en/airtag/">AirTag</a>
-                </div>
+        <label id="blackblock" for="searchcheckbox"></label>
+        <div id="searchconatiner">
+            <button id="searchbutton" class="animation" type="submit"></button>
+            <input id="searchfield" class="animation" type="search" name="searchbox" placeholder="Search apple.com" autofocus>                    <!-- autofocus, always focus -->
+            <label id="cross" class="opacity" for="searchcheckbox"></label>
+            <div id="whiteblock">
+                <div id="quicklinks" class="animation">QUICK LINKS</div>
+                <a class="searchitems darkcolor animation" href="/hk/en/retail/">Find a Store</a>
+                <a class="searchitems darkcolor animation" href="/hk/shop/goto/accessories/apple_accessories">Accessories</a>
+                <a class="searchitems darkcolor animation" href="https://www.apple.com/hk/en/airpods/">AirPods</a>
+                <a class="searchitems darkcolor animation" href="https://www.apple.com/hk/en/airtag/">AirTag</a>
             </div>
         </div>
     </div>
-
+    
 
 </body>
 </html>
